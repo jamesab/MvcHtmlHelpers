@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "From the App_Code Folder";
+}
+<h2>@ViewBag.Title View</h2>
+
+
+<ol>
+    <li>Just create a view in the App_Code folder that contains example code below:</li>
+
+        <pre>
+        <code>
+
+        @@helper Method_Name(DataType param1,DataType param2)
+        {
+            Your html here with your params
+        }
+        </code>
+        </pre>
+
+    <li>Place example code in the view where you want it:  <br /><sup style="font-style: italic;">(Note: the file name is MyHelper.cshtml)</sup></li>
+
+        <pre>
+        <code>
+            @@MyHelper.Method_Name(param1,param2)
+        </code>
+        </pre>
+</ol>
+
+
+@MyHelper.JamesModal(new System.Web.HtmlString("<h1>From App_Code Folder!</h1><p>My complex html i need to pass to the model</p><input type=\"text\" class=\"form-control\" placeholder=\"Test textbox\" /><button type=\"button\" class=\"btn btn-primary\">Test Button</button><button type=\"button\" class=\"btn btn-danger\">OK</button>"),"My Modal Title!")

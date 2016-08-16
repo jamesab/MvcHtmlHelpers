@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+    <!-- Modal -->
+@helper JamesModal(HtmlString content,string MyTitle)
+{
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" data-show="true" data-keyboard="false" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="modal-title text-center" id="myModalLabel"><i class="glyphicon glyphicon-heart"></i><br /> @MyTitle</div>
+                </div>
+                <div class="modal-body">
+                    @content
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@helper JamessTextBoxCombo()
+{
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    </div>
+}
+
+

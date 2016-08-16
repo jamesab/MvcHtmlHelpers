@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "From the Controller";
+}
+<h2>@ViewBag.Title.</h2>
+
+<ol>
+    <li>Add a folder to your solution to keep your classes organized. <sup>(folder name example: HtmlHelpers)</sup></li>
+
+    <pre>
+    <code>
+        @@helper Method_Name(DataType param1,DataType param2)
+        {
+            Your html here with your params
+        }
+        </code>
+        </pre>
+
+    <li>Place example code in the view where you want it:  <br /><sup style="font-style: italic;">(Note: the file name is MyHelper.cshtml)</sup></li>
+
+    <pre>
+    <code>
+            @@MyHelper.Method_Name(param1,param2)
+        </code>
+        </pre>
+</ol>
+
+
+@Html.Raw(ViewBag.Helper)
